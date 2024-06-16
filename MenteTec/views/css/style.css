@@ -1,0 +1,859 @@
+:root{
+--primaryColor: #F9FCFF;
+--SecondaryColor: #2C2C2C;
+--verde: #70FFBA;
+--medioVerdeAzul: #85D3FE;
+--azul: #70EEFF;
+}
+
+/*Ocupará todo el ancho sin paddings o margins*/
+.FillMaxWidth{
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+
+/*Nav Bar*/
+.NavBar{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--primaryColor);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 2px #00000015;
+   /* position: fixed;*/
+}
+.backgroundColor{
+    background-color: var(--primaryColor);
+}
+
+/*sin estilo en las listas*/
+.ulNoneStyle { 
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+/*estilo del texto dentro de las listas*/
+.ulNoneStyle a{
+    text-decoration: none;
+    color: var(--SecondaryColor);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.ulNoneStyle span{
+    text-decoration: none;
+    color: var(--azul);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.inicioHome{
+    color: #0D4E6D;
+}
+
+.FuenteLogo{
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+
+  
+}
+
+/*contenedor del logo*/
+.MenteTecContainer{
+padding-left: 4%;
+}
+/*contenedor de las listas*/
+.ListContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+padding-right: 4%;
+}
+
+.MenteTecContainer a{
+    text-decoration: none;
+    color: var(--SecondaryColor); 
+}
+
+.WelcomeGirlHome{
+padding-top: 2%;
+width: 100%;
+display: grid;
+grid-template-columns:0.5fr 1fr;
+
+}
+.GirlContainerHome{
+    margin-top: 10%;
+   /* background-color: #2C2C2C;*/
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.GirlContainerHome img{
+    height: 40rem;
+    width: auto;
+}
+
+.WelcomeContainerHome{
+
+   /* background-color: #531717;*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorBienvenidos{
+/*background-color: #85D3FE;*/
+max-width: 80rem;
+}
+
+.WelcomeContainerHome h1{
+
+text-align: center;
+
+}
+
+.GreenBlueGradient{
+
+background:linear-gradient(
+    var(--verde),
+    var(--medioVerdeAzul),
+    var(--azul)
+    );
+
+}
+
+
+.gradientTextColor{
+    font-family: "Roboto", sans-serif;
+    font-size: 9rem;
+    font-weight: 900;
+    font-style: normal;
+    background-image: linear-gradient(
+        var(--verde),
+        var(--medioVerdeAzul),
+        var(--azul)
+         );
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.WelcomeContainerHome h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style:normal;
+    color: var(--SecondaryColor);
+    text-align: center;
+}
+
+.containerH2Home{
+   /* background-color: #70FFBA;*/
+    max-width: 50rem;
+    letter-spacing: 0.5rem;
+}
+
+
+
+.secondPartHome{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr ;
+}
+
+
+.GirlContainerHome2{
+    margin-right: 6%;
+/*background-color: beige;*/
+}
+
+.H2Style{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style:normal;
+    color: var(--SecondaryColor);
+}
+
+.text-AlignCenter{
+
+    text-align: center;
+}
+
+.parrafoAgendarCita p{
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    font-style:normal;
+    text-align: justify;
+    color: var(--SecondaryColor);
+   }
+
+   .parrafoAgendarCita{
+    max-width: 70rem;
+   }
+   
+
+.imagenPersonaHomeStyle{
+    height: 40rem;
+    width: auto; 
+}
+
+.ThirdPartHome{
+    margin-left: 6%; 
+    margin-right: 6%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr ;
+}
+
+.cursorEncima:hover{
+    background-color:#dbdbdb36;
+      
+}
+
+.formatoTituloYParrafo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/**********************CITAS********************/
+
+.contenedorFormulario{
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+   /* background-color: #2C2C2C;*/
+}
+
+.formulario{
+  margin-top: 10rem;
+  background-color:var(--primaryColor);
+  box-shadow: 0 4px 5px #00000057;
+  margin-bottom: 10%;
+  border-radius: 2rem;
+  
+}
+
+.formularioReporte{
+    margin-top: 1rem;
+    background-color:var(--primaryColor);
+    box-shadow: 0 4px 5px #00000057;
+    margin-bottom: 1%;
+    border-radius: 2rem;
+    
+  }
+
+.contnedorPrimerPasoCambio{
+    display: flex;
+    justify-content: center;
+    width:50rem;
+    padding-bottom: 2rem;
+}
+.contenedorFormularioDirecto{
+padding-left: 5%;
+padding-right: 5%;
+padding-bottom: 5%;
+height: 30rem;
+display: grid;
+grid-template-columns: repeat(2,50%);
+gap: 1rem;
+}
+
+.contenedorCitasReportes{
+    
+padding-left: 20%;
+padding-right: 20%;
+}
+
+.contenedorCitasReportes2{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-left: 20%;
+    padding-right: 20%;
+    }
+
+.contenedorMiCuenta{
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-bottom: 5rem;
+    }
+
+.textArribaInputAbajo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.textArribaInputAbajo input{
+
+    height: 2rem;
+
+}
+.textArribaInputAbajo select{
+
+    height: 2rem;
+
+}
+.textArribaInputAbajo label{
+
+    font-family: "Roboto";
+    font-weight: 500;
+    
+
+}
+
+.contnedor{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.contenedorButton{
+    display: flex;
+    justify-content: end;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.cont{
+    padding: 0.4rem;
+    border-radius: 1rem;
+    background-color: #58fc73;
+   
+   /* border: 1px solid var(--SecondaryColor); */
+}
+
+.cont:hover{
+    background-color: #4eda65;
+}
+
+.botonEnviar{
+    padding: 1rem;
+    width: 10rem;
+   
+}
+
+.contenedorEncabezadoVerde{   
+    width: 100%;
+}
+
+.EncabezadoVerde{ 
+    height: 15rem;
+    width: 100%;
+    background-color: #0D4E6D;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+.EncabezadoVerde h1{ 
+    padding-bottom: 2.5%;
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    font-style: oblique;
+    color: #F9FCFF;
+
+}
+
+.textArribaInputAbajo input{
+    border-radius: 0.5rem;
+    border-style: none;
+    border: 0.1px solid #ccc;
+
+    
+}
+.textArribaInputAbajo select{
+    border-radius: 0.5rem;
+    border-style: none;
+    border: 0.1px solid #ccc;
+}
+
+.textArribaInputAbajo textarea{
+    border-radius: 0.5rem;
+    border-style: none;
+    border: 0.1px solid #ccc;
+}
+
+.headerColor{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.contenedorTexto{
+        min-width: 30rem;
+
+}
+
+.fuenteConoceEquipo{
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 5rem;
+    font-style: normal;
+    text-align: left;
+    color: #FFFFFF;
+}
+.fuenteParrafo{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: normal;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+@media(max-width:1612px){
+    .fuenteParrafo{
+        font-size:1.5rem ;
+    }
+}
+@media(max-width:1287px){
+    .fuenteParrafo{
+        font-size:1.4rem ;
+    }
+}
+
+
+.imagenPersonaSobreNosotrosStyle{
+    height: 30rem;
+    width: auto; 
+}
+
+.conenedorTextoYparrafo{
+margin-left: 5%;
+max-width: 60rem;
+margin-bottom: 1rem;
+}
+
+.contendorParrafo{
+    max-width: 80rem;
+}
+.contenedorImagen{
+   /* background-color: #0D4E6D;*/
+    position: relative;
+ 
+}
+.imagen1{
+    position: absolute;
+    top: 0;
+    left: 12rem;
+  
+   
+}
+
+.imagen2{
+    position: relative;
+    top: 0;
+    left: 0rem;
+   
+}
+
+.contenedorSobreNosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+}
+
+.tituloSobreNosotros{
+    text-align: center;
+}
+.parrafoSobreNosotros{
+    font-family: "Roboto","sans-serif";
+    font-weight: 300;
+    font-size: 1.5rem;
+    font-style: normal;
+    text-align: justify;
+    color: #2C2C2C;
+}
+
+.senor{
+    height: 20rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    /*background-color: #0D4E6D;*/
+}
+
+.cuadroColores{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: var(--verde);
+    aspect-ratio: 1/1;
+    height:16rem;
+  
+    object-fit: contain;
+}
+
+.cuadroColores2{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: #71F8D9;
+    aspect-ratio: 1/1;
+    height:16rem;
+
+    object-fit: contain; 
+}
+
+.cuadroColores3{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: var(--azul);
+    aspect-ratio: 1/1;
+    height:16rem;
+
+    object-fit: contain;
+}
+
+.contenedorTituloCuadros{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+   /* background-color: #0D4E6D;*/
+}
+
+.contenedorPsicologos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 10rem;
+    gap: 5%;
+   
+}
+
+.centrar{
+    text-align: center;
+}
+
+.textoStyle{
+    font-family: "Roboto","sans-serif";
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-style: normal;
+    text-align: center;
+    color: #2C2C2C;
+    letter-spacing: 0.3rem;
+}
+.justificar{
+    text-align: justify;
+}
+
+.contenedorNombreDescripcion{
+    max-width: 18rem;
+}
+.contnedorTodo{
+    margin-bottom: 3rem;
+}
+
+.contenedorImagenFondo{
+    height: 30rem;
+    margin-top: 0;
+    
+}
+
+.cubrirFondoImg{
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    bottom: 5.99rem;
+    filter: brightness(0.5);
+}
+
+
+
+.ubicacion{
+    color: #FFFFFF;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top:8%;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.contenedorPadreBody{
+
+    width: 100%;
+    padding-top: 10%;
+   /* background-color: #2C2C2C;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadroLogin{
+    padding-top: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    height:30rem;
+    width: 30rem;
+
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 0 9px 2px #00000015;
+    border-radius: 0.5rem;
+}
+.emailContrasenaInput{   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputStyle{
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 0.4rem;
+    border-width: 0.0px;
+    background-color: #ececec;
+}
+
+.inputStyleButton{
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 0.4rem;
+    border-width: 0.0px;
+    background-color: var(--SecondaryColor);
+    color: #ffffff;
+}
+
+
+.bodyBack{
+    margin: 0;               /* Elimina el margen por defecto del body */
+    height: 100vh;           /* Asegura que el body tenga la altura de la ventana */
+    background: linear-gradient(
+        to bottom,           /* Dirección del gradiente */
+        var(--verde),
+        var(--medioVerdeAzul),
+        var(--azul)
+    );
+    background-size: cover;  /* Asegura que el gradiente cubra todo el contenedor */
+}
+
+.imagenPrincipalArticulos{
+    height: 10rem;
+    
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #4eda65;
+}
+
+.tamanoImagenPrincipal{
+
+    border-radius: 1rem;
+    height: 38rem;
+    object-fit: cover;
+    
+}
+
+.contenedorTodo{
+    padding-left:1%;
+    padding-right:1%;
+
+}
+
+
+.tarjetaArticulo{
+    height: 30rem;
+    width: 25rem;
+    padding: 1rem;
+  
+}
+
+.tarjetaArticulo:hover{
+background-color: #e6e6e6;
+}
+
+.formatoimagenArti{
+    aspect-ratio: 16/9;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    
+}
+
+.formatoimagenArtiAutor{
+    border-radius: 50%;   
+    height: 2rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.contenedorfotoCircular{      
+display: flex;
+gap: 1rem;
+}
+
+
+.fuenteArticulo{
+    padding-top: 0.7rem;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.contTodosArticulos{
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+.bodyTodosArticulos{
+    background-color: var(--primaryColor);
+}
+
+
+.aa{
+text-decoration: none; /* Quitar subrayado */
+color: inherit; /* Usar el color heredado del contenedor padre */
+cursor: pointer; /* Cambiar el cursor al pasar por encima */    
+} 
+
+
+.border{
+    border-radius: 0.9rem;
+    background-color:rgb(235, 235, 235); 
+}
+
+.transparente{
+    background-color: var(--primaryColor);
+}
+
+.fuenteArticuloBlanco{
+    padding-top: 0.7rem;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.fuenteArticuloBlancoSub{
+    padding-top: 0.7rem;
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: #FFFFFF;
+}
+
+
+.imagenOscura{
+    filter: brightness(0.5);
+}
+
+.fuenteAyudaDescri{
+    font-size: 1.2rem;
+}
+
+.paddingTop{
+    padding-top: 2rem;
+}
+
+.ordenHorizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.tamanoInput{
+    width: 100%;
+}
+
+
+.color{
+    background-color: #39da54;
+}
+
+
+/****************************/
+.contenedorFooter{
+   /* background-color:#e5ecee ;*/
+    background-color:#2C2C2C ;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 2rem;
+    align-self: flex-end;
+}
+
+.FuenteLogoColor{
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+.H2StyleFooter{
+    color: var(--primaryColor);
+    font-family: "Roboto";
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style:normal;
+}
+
+.redesSociales{
+    color: var(--primaryColor);
+    
+}
+
+.redesSociales li>a{
+    color: var(--primaryColor);
+    
+}
+
+.redesSociales li>a:hover{
+    color: dodgerblue;
+    
+}
+
+
+.body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50rem;
+}
+
+.footer{
+position: absolute;
+bottom: 0;
+width: 100%;
+}
