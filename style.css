@@ -1,0 +1,44 @@
+/* Estilos para el círculo de la foto */
+.profile-circle {
+    width: 400px;
+    height: 400px;
+    background-color: #6c757d; /* Color gris de Bootstrap */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /* Efecto de sombra luminosa */
+    box-shadow: 0 0 40px 10px rgba(108, 117, 125, 0.7);
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tag {
+width: 30px; 
+height: auto; 
+aspect-ratio: 1 / 1; 
+}
+
+.github {
+width: 30px; 
+height: auto; 
+aspect-ratio: 1 / 1; 
+}
+/* Ajustes adicionales para espaciado y tamaño */
+main section {
+    padding-top: 6rem; /* Espacio para que la barra de navegación no cubra el contenido */
+    min-height: 100vh;
+}
+
+#inicio {
+    padding-top: 4rem; /* Un poco menos de espacio para la primera sección */
+}
+
+/* Opcional: Ajustar el color de los links de la barra de navegación al hacer scroll */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #0d6efd; /* Color azul de Bootstrap */
+}
