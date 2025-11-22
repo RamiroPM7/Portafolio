@@ -1,44 +1,337 @@
-/* Estilos para el círculo de la foto */
+:root {
+    --bg-color: #0a0e17;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --primary-color: #00f2ff; /* Neon Cyan */
+    --secondary-color: #7000ff; /* Neon Purple */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-hover-bg: rgba(255, 255, 255, 0.1);
+    --font-main: 'Outfit', sans-serif;
+    --font-code: 'Fira Code', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.text-accent {
+    color: var(--primary-color);
+    font-family: var(--font-code);
+    font-size: 1.1rem;
+}
+
+.text-light-muted {
+    color: var(--text-muted);
+}
+
+.text-primary-highlight {
+    color: var(--primary-color);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #fff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 14, 23, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-family: var(--font-code);
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.social-nav-link i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-nav-link:hover i {
+    transform: translateY(-2px);
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: var(--font-code);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary-custom:hover {
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.btn-primary-custom:hover::before {
+    width: 100%;
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: var(--font-code);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    border-color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hero Section */
+#inicio {
+    padding-top: 80px;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Profile Image */
+.profile-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-circle {
-    width: 400px;
-    height: 400px;
-    background-color: #6c757d; /* Color gris de Bootstrap */
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     overflow: hidden;
+    border: 2px solid var(--primary-color);
     position: relative;
-    /* Efecto de sombra luminosa */
-    box-shadow: 0 0 40px 10px rgba(108, 117, 125, 0.7);
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
 }
 
 .profile-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.tag {
-width: 30px; 
-height: auto; 
-aspect-ratio: 1 / 1; 
+.profile-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+    animation: pulse 3s infinite;
 }
 
-.github {
-width: 30px; 
-height: auto; 
-aspect-ratio: 1 / 1; 
-}
-/* Ajustes adicionales para espaciado y tamaño */
-main section {
-    padding-top: 6rem; /* Espacio para que la barra de navegación no cubra el contenido */
-    min-height: 100vh;
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
-#inicio {
-    padding-top: 4rem; /* Un poco menos de espacio para la primera sección */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
 }
 
-/* Opcional: Ajustar el color de los links de la barra de navegación al hacer scroll */
-.navbar-dark .navbar-nav .nav-link.active {
-    color: #0d6efd; /* Color azul de Bootstrap */
+/* Cards (Glassmorphism) */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary-color);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.glass-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.glass-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    font-weight: 500;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0.4em 0.8em;
+}
+
+/* About Section */
+.skill-item {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Contact Section */
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) rotate(360deg);
+    color: white;
+}
+
+.social-btn.linkedin:hover { background-color: #0077b5; border-color: #0077b5; }
+.social-btn.github:hover { background-color: #333; border-color: #333; }
+.social-btn.email:hover { background-color: #ea4335; border-color: #ea4335; }
+.social-btn.facebook:hover { background-color: #1877f2; border-color: #1877f2; }
+
+/* Footer */
+.glass-footer {
+    background: rgba(10, 14, 23, 0.9);
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .profile-circle {
+        width: 230px;
+        height: 230px;
+    }
 }
